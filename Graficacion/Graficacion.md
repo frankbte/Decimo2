@@ -17,3 +17,5 @@
 **Grafica raster**: es una grafica que almacena en la memoria de la computadora usando una malla para grabar la información de cada pixel que forma la imagen.
 
 **Grafica vectorial**: es una grafica de computadora que es almacenada en la memoria de la computadora usando formulas matemáticas.
+
+**Esta es una prueba **

@@ -110,3 +110,22 @@ El mundo real que será implementado en el sistema se percibe como un conjunto d
 
 ## Superclaves
 ### La superclave es un conjunto de uno o vario atributos que, considerados conjuntamente, permiten identificar univocamente  cada una tupla de la relación
+
+
+## Atributos complejos
+
+* ### Los atributos compuestos enumeran los componentes del mismo y sustituyen al atributo que hace referencia a la agregación
+* Ejemplo, nombreProfesor
+	* Nombre, primer-apellido, segundo-apellido
+* Ejemplo, dirección
+	 * Calle, ciudad, colonia, código postal
+* ### Atributos multivalorados
+	* Se indican entre llaves {numero-teléfono}
+* ### Atributos derivados
+	* Se utilizan paréntesis
+
+
+
+# Diagrama entidad - relacion
+
+![[Pasted image 20250219074735.png]]

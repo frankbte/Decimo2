@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Analisis/Análisis de algoritmos.md",
+                "file": "BD/Bases de datos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Análisis de algoritmos"
+              "title": "Bases de datos"
             }
           }
         ]
@@ -180,5 +180,18 @@
     }
   },
   "active": "c11bf5e89f3e6538",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Pasted image 20250219074735.png",
+    "Seminario/Redes de Sensores.ppt",
+    "Redes/Unidad I_Software de las Redes de Computadoras.ppt",
+    "Redes/Unidad I_Modelos de Referencia.pptx",
+    "Seminario/IoT Introduccion.pdf",
+    "Seminario/Unidad I_Software de las Redes de Computadoras.ppt",
+    "Seminario/Unidad I_Modelos de Referencia.pptx",
+    "Redes/Redes de Sensores.ppt",
+    "Unidad I_Software de las Redes de Computadoras.ppt",
+    "Unidad I_Modelos de Referencia.pptx",
+    "Redes de Sensores.ppt",
+    "Analisis/Análisis de algoritmos.md"
+  ]
 }

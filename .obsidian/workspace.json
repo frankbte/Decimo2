@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "17e1800c48644ad1",
+        "id": "72ccca56f50f8976",
         "type": "tabs",
         "children": [
           {
-            "id": "c11bf5e89f3e6538",
+            "id": "9f7011e1d26c4219",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BD/Bases de datos.md",
+                "file": "IA/Inteligencia Artificial.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bases de datos"
+              "title": "Inteligencia Artificial"
             }
           }
         ]
@@ -179,9 +179,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c11bf5e89f3e6538",
+  "active": "9f7011e1d26c4219",
   "lastOpenFiles": [
+    "Pasted image 20250226222050.png",
+    "Pasted image 20250226193549.png",
+    "Pasted image 20250226192520.png",
     "Pasted image 20250219074735.png",
+    "Pasted image 20250130085008.png",
+    "Pasted image 20250130084022.png",
+    "Pasted image 20250130083847.png",
+    "IMG_5239.jpg",
+    "IMG_5240.jpg",
+    "BD/Bases de datos.md",
     "Seminario/Redes de Sensores.ppt",
     "Redes/Unidad I_Software de las Redes de Computadoras.ppt",
     "Redes/Unidad I_Modelos de Referencia.pptx",

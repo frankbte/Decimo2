@@ -40,6 +40,47 @@ $$
 # Arboles de decisión
 
 
+# Regresión lineal
 
+## Que es la regresion lineal?
+
+La **regresión lineal** es un método estadístico y de aprendizaje automático utilizado para modelar la relación entre una variable dependiente (_Y_) y una o más variables independientes (_X_). Se basa en la idea de ajustar una línea recta a un conjunto de datos de tal manera que minimice la diferencia entre los valores predichos y los valores reales.
+
+
+![[Pasted image 20250226192520.png]]
+
+
+
+
+![[Pasted image 20250226193549.png]]
+
+## Cual es el proposito de la regresion lineal?
+El objetivo es encontrar los coeficientes $$ b_{0}, b_{1} $$que minimicen la suma de los errores (ε\varepsilonε). Se hace mediante el método de **mínimos cuadrados ordinarios (OLS)** o técnicas más avanzadas como el **descenso de gradiente** en Machine Learning.
+
+
+# Clasificación lineal
+
+# Que es?
+
+La **clasificación lineal** es un método en **aprendizaje automático** que se usa para **separar datos en distintas clases** usando una frontera de decisión que es una **línea recta** (en 2D), un **plano** (en 3D) o un **hiperplano** (en dimensiones mayores).
+
+Este tipo de clasificación es útil cuando los datos son **linealmente separables**, es decir, se pueden dividir con una línea recta o un plano sin errores significativos.
+
+![[Pasted image 20250226222050.png]]
+
+
+### **Modelos de clasificación lineal más comunes**
+
+1. **Regresión logística** 
+    - Usa la función sigmoide para clasificar datos en dos clases (0 o 1).
+2. **Máquinas de soporte vectorial (SVM)** 
+    - Encuentran la **mejor línea de separación** maximizando la distancia entre clases.
+3. **Perceptrón** 
+    - Es el modelo más simple de una red neuronal, basado en sumas ponderadas de las entradas.
+
+---
+
+
+## Se explicarán estos temas mas adelante...
 
 

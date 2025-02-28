@@ -1,4 +1,5 @@
-# ¿ Que es la inteligencia artificial?
+# ¿Que es la inteligencia artificial?
+
 
 Es el desarrollo de **agentes racionales**, que al interactuar con un entorno **maximice** la **esperanza** de una **utilidad** futura.
 

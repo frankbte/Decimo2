@@ -121,10 +121,11 @@ Este tipo de clasificación es útil cuando los datos son **linealmente separabl
         - **Expansión**: Generar los sucesores de un nodo.
         - **Estrategia de Exploración**: El método utilizado para seleccionar qué nodo expandir a continuación.
     - **Búsqueda en Profundidad (DFS)**: Expande el nodo más profundo en la frontera. Utiliza una pila LIFO (Last In, First Out).
-        
+        ![[Pasted image 20250303221903.png]]
     - **Búsqueda en Anchura (BFS)**: Expande el nodo menos profundo en la frontera. Utiliza una cola FIFO (First In, First Out). BFS encuentra el camino más corto en términos de número de transiciones, pero no necesariamente el de menor costo.
-        
+        ![[Pasted image 20250303221923.png]]
     - **Búsqueda de Costo Uniforme (UCS)**: Expande el nodo con el costo de ruta más bajo. Es completo y óptimo, pero puede ser ineficiente porque explora en todas las direcciones.
+- ![[Pasted image 20250303221958.png]]
         
     - **A***: Una búsqueda informada que combina el costo del camino recorrido hasta el momento (`g(n)`) con una estimación heurística del costo restante hasta el objetivo (`h(n)`).
         

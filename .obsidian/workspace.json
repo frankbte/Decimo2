@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Inteligencia Artificial"
             }
+          },
+          {
+            "id": "3f2030acd61b6e06",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -179,8 +192,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9f7011e1d26c4219",
+  "active": "1be54aee6953d8c1",
   "lastOpenFiles": [
+    "Procesos/sampling/__pycache__/sortValues.cpython-312.pyc",
+    "Procesos/sampling/sortValues.py",
+    "Procesos/sampling/sampling.py",
+    "Procesos/sampling/numeros.txt",
+    "Procesos/sampling/generar_datos.py",
+    "Procesos/sampling/__pycache__",
+    "Procesos/sampling",
     "Pasted image 20250303221958.png",
     "Pasted image 20250303221923.png",
     "Pasted image 20250303221903.png",
@@ -191,18 +211,11 @@
     "Pasted image 20250226224233.png",
     "Pasted image 20250226223927.png",
     "Pasted image 20250226223801.png",
-    "Pasted image 20250226222050.png",
     "BD/Bases de datos.md",
     "Seminario/Redes de Sensores.ppt",
     "Redes/Unidad I_Software de las Redes de Computadoras.ppt",
     "Redes/Unidad I_Modelos de Referencia.pptx",
     "Seminario/IoT Introduccion.pdf",
-    "Seminario/Unidad I_Software de las Redes de Computadoras.ppt",
-    "Seminario/Unidad I_Modelos de Referencia.pptx",
-    "Redes/Redes de Sensores.ppt",
-    "Unidad I_Software de las Redes de Computadoras.ppt",
-    "Unidad I_Modelos de Referencia.pptx",
-    "Redes de Sensores.ppt",
     "Analisis/Análisis de algoritmos.md"
   ]
 }

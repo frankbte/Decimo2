@@ -21,23 +21,26 @@ def main():
     #    print(f"Lista original: {lista_completa}")
 
     #Mandampos el numero de elementos a todos los procesos
-    n = comm.bcast(n, root=0)
+    n = comm.bcast(n, root=root)
     
     # División de la lista en sublistas usando BLOCK_LOW y BLOCK_HIGH
-    if rank == 0:
+    if rank == root:
         # Crear una lista de sublistas para scatter
         sublistas = [lista_completa[BLOCK_LOW(i, size, n):BLOCK_HIGH(i, size, n) + 1] for i in range(size)]
     else:
         sublistas = None
 
     # Scatter para distribuir las sublistas
-    lista_local = comm.scatter(sublistas, root=0)
+    lista_local = comm.scatter(sublistas, root=root)
     lista_local = quicksort(lista_local)
 
 
     print(f"Proceso: {rank}, lista: {lista_local}")
 
     # Paso 3
+    # n = numero de muestras
+    # size = numero de procesos
+    # 
 
     num_muestras  = size
     muestras = []
@@ -51,15 +54,35 @@ def main():
 
     print(f"Proceso: {rank}, muestras: {muestras}")
 
-    muestras_recolectadas = comm.gather(muestras, root=0)
+    muestras_recolectadas = comm.gather(muestras, root=root)
 
-    if rank == 0:
-         # Aplanar la lista para tener una sola lista de muestras
+    #paso 4
+    if rank == root:
+        # Aplanar la lista para tener una sola lista de muestras
         muestras_recolectadas = [item for sublist in muestras_recolectadas for item in sublist]
-        muestas_ord = quicksort(muestras_recolectadas)
-        print(f"Muestras ordenadas: {muestas_ord}")
-        pivotes  = [muestas_ord[i *size +(size // 2) - 1]]
+        muestras_ord = quicksort(muestras_recolectadas)
+        print(f"Muestras ordenadas: {muestras_ord}")
+        pivotes  = [muestras_ord[i * size + (size // 2)- 1] for i in range(1, size)]
         print(f"Pivotes: {pivotes}")
-        
+    else:
+        pivotes = None
+            
+    pivotes = comm.bcast(pivotes, root=root)
+
+    #paso 5
+    particiones = [[] for _ in range(size)]  # Inicializar listas vacías para cada partición
+
+    for num in lista_local:
+        for i, pivote in enumerate(pivotes):
+            if num <= pivote:
+                particiones[i].append(num)
+                break
+        else:
+            # Si el número es mayor que todos los pivotes, va a la última partición
+            particiones[-1].append(num)
+
+    print(f"Proceso: {rank}, particiones: {particiones}")
+
+
 if __name__ == "__main__":
     main()

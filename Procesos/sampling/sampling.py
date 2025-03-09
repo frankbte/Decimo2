@@ -40,7 +40,6 @@ def main():
     # Paso 3
     # n = numero de muestras
     # size = numero de procesos
-    # 
 
     num_muestras  = size
     muestras = []
@@ -83,6 +82,17 @@ def main():
 
     print(f"Proceso: {rank}, particiones: {particiones}")
 
+    # Paso 6
+    send_data = [np.array(part) for part in particiones]  # Convertimos a numpy arrays
+    recv_data = comm.alltoall(send_data)  # Intercambio de particiones
+
+    # Convertimos las listas recibidas en una sola lista ordenada
+    lista_final = sorted([num for sublist in recv_data for num in sublist.tolist()])
+    print(f"Proceso {rank}, Lista Final Ordenada: {lista_final}")
+
+    lista_final = comm.gather(lista_final, root=root)
+    if rank == root:
+        print(f"Lista Final Ordenada: {lista_final}")
 
 if __name__ == "__main__":
     main()

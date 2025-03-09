@@ -192,8 +192,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1be54aee6953d8c1",
+  "active": "030490d5b6449f94",
   "lastOpenFiles": [
+    "Procesos/sampling.zip",
     "myenv/lib/python3.12/site-packages/numpy-2.2.3.dist-info/REQUESTED",
     "myenv/lib/python3.12/site-packages/numpy-2.2.3.dist-info/INSTALLER",
     "myenv/bin/numpy-config",
@@ -204,7 +205,6 @@
     "myenv/lib/python3.12/site-packages/numpy/typing/tests/__pycache__/test_isfile.cpython-312.pyc",
     "myenv/lib/python3.12/site-packages/numpy/typing/tests/data/pass/__pycache__/warnings_and_errors.cpython-312.pyc",
     "myenv/lib/python3.12/site-packages/numpy/typing/tests/data/pass/__pycache__/ufuncs.cpython-312.pyc",
-    "myenv/lib/python3.12/site-packages/numpy/typing/tests/data/pass/__pycache__/ufunclike.cpython-312.pyc",
     "myenv/lib/python3.12/site-packages/numpy/random/LICENSE.md",
     "Pasted image 20250303221958.png",
     "Pasted image 20250303221923.png",

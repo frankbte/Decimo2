@@ -4,6 +4,12 @@ from mpi4py import MPI
 from sortValues import *
 import math 
 
+def esta_ordenada(lista):
+    for i in range(len(lista)-1):
+        if lista[i] > lista[i+1]:
+            return False
+    return True
+
 def main():
     #Leemos el archivo de datos
     nombre_archivo = "numeros.txt"
@@ -16,9 +22,9 @@ def main():
     rank = comm.Get_rank()
     size = comm.Get_size()
     root = 0
-
+    t1 = MPI.Wtime()
     #if rank == root:
-    #    print(f"Lista original: {lista_completa}")
+    #print(f"Lista original: {lista_completa}")
 
     #Mandampos el numero de elementos a todos los procesos
     n = comm.bcast(n, root=root)
@@ -35,7 +41,7 @@ def main():
     lista_local = quicksort(lista_local)
 
 
-    print(f"Proceso: {rank}, lista: {lista_local}")
+    #print(f"Proceso: {rank}, lista: {lista_local}")
 
     # Paso 3
     # n = numero de muestras
@@ -51,7 +57,7 @@ def main():
         # Si la lista es más pequeña que el número de procesos, tomamos todos los valores
         muestras = lista_local
 
-    print(f"Proceso: {rank}, muestras: {muestras}")
+    #print(f"Proceso: {rank}, muestras: {muestras}")
 
     muestras_recolectadas = comm.gather(muestras, root=root)
 
@@ -60,9 +66,9 @@ def main():
         # Aplanar la lista para tener una sola lista de muestras
         muestras_recolectadas = [item for sublist in muestras_recolectadas for item in sublist]
         muestras_ord = quicksort(muestras_recolectadas)
-        print(f"Muestras ordenadas: {muestras_ord}")
+        #print(f"Muestras ordenadas: {muestras_ord}")
         pivotes  = [muestras_ord[i * size + (size // 2)- 1] for i in range(1, size)]
-        print(f"Pivotes: {pivotes}")
+        #print(f"Pivotes: {pivotes}")
     else:
         pivotes = None
             
@@ -80,19 +86,27 @@ def main():
             # Si el número es mayor que todos los pivotes, va a la última partición
             particiones[-1].append(num)
 
-    print(f"Proceso: {rank}, particiones: {particiones}")
+    #print(f"Proceso: {rank}, particiones: {particiones}")
 
     # Paso 6
-    send_data = [np.array(part) for part in particiones]  # Convertimos a numpy arrays
+    send_data = [part for part in particiones]  # Convertimos a numpy arrays
     recv_data = comm.alltoall(send_data)  # Intercambio de particiones
 
-    # Convertimos las listas recibidas en una sola lista ordenada
-    lista_final = sorted([num for sublist in recv_data for num in sublist.tolist()])
-    print(f"Proceso {rank}, Lista Final Ordenada: {lista_final}")
+    
+    for i in range(len(recv_data)- 1):
+        recv_data[0] = mezcla(recv_data[0], recv_data[1])
+        recv_data.pop(1)
+    #print(f"Proceso {rank}, Lista_pivote: {recv_data[0]}")
 
-    lista_final = comm.gather(lista_final, root=root)
+    lista_final = comm.gather(recv_data[0], root=root)
+    t2 = MPI.Wtime() - t1
+
     if rank == root:
-        print(f"Lista Final Ordenada: {lista_final}")
+        lista_final= [item for sublist in lista_final for item in sublist]
+        #print(f"Lista Final Ordenada: {lista_final}")
+        ordenada =esta_ordenada(lista_final)
+        print(f"{size}, {ordenada}, {t2}")
+            
 
 if __name__ == "__main__":
     main()

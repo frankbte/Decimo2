@@ -184,3 +184,61 @@ Este tipo de clasificación es útil cuando los datos son **linealmente separabl
     
     - **Características Individuales**: `length>10`, `fracOfAlpha`, `contains @`, `endsWith com`, `endsWith org`.
     - **Plantilla de Característica**: "Los últimos tres caracteres son iguales a...". Esto generaría características como `endsWith aaa`, `endsWith aab`, ..., `endsWith com`, ..., `endsWith zzz`.
+
+
+# Markov Decision Processes (MDP)
+
+## Que es?
+
+Los **Procesos de Decisión de Markov (MDP, por sus siglas en inglés)** son un marco matemático utilizado para modelar problemas de decisión secuenciales en los que un agente interactúa con un entorno estocástico. Se usan ampliamente en **inteligencia artificial, aprendizaje por refuerzo, robótica y teoría de control**.
+
+## Como se define?
+Un MDP se define por el cuádruplo (S,A,P,R,γ)(S, A, P, R, \gamma)(S,A,P,R,γ):
+
+1. **SSS - Espacio de estados**: Conjunto de todos los posibles estados en los que puede encontrarse el agente.
+2. **AAA - Espacio de acciones**: Conjunto de todas las acciones posibles que el agente puede tomar.
+3. **P(s′∣s,a)P(s' | s, a)P(s′∣s,a) - Función de transición**: Probabilidad de moverse del estado sss al estado s′s's′ al ejecutar la acción aaa.
+4. **R(s,a)R(s, a)R(s,a) - Recompensa**: Valor numérico que el agente recibe después de realizar la acción aaa en el estado sss.
+5. **γ\gammaγ - Factor de descuento**: Parámetro entre 0 y 1 que determina cuánto influyen las recompensas futuras en la toma de decisiones actuales.
+
+### Siguiendo las notas de clases...
+
+**MDP** = $<S, A, A, T, R, S_t, gamma$ >
+
+**S** = ${s_1, s_2, ..., S_n}$
+**A** = ${A_1, A_2, ..., A_m}$
+**A** = $S -> P(A)$                $A(s)$ acciones legales en s que pertenece a
+**T** = $S * A * S -> R$
+**r** = $S * A -> R$
+
+donde $T(s,a,s') = Pr(S_{t+1}) = S' | S_t = S, A = a)$  Sumatoria $T(s, a, s') = 1$
+$S_t$ es subconjunto de $S$ ----------- Conjunto de estados terminales
+$0 <= 0 <= 1$  ------- Factor de descuento
+
+
+continuacion ...
+
+![[Pasted image 20250313200416.png]]
+
+![[Pasted image 20250313200431.png]]
+## Ejemplo simple
+
+
+
+![[Pasted image 20250313193524.png]]
+
+
+![[Pasted image 20250313193429.png]]
+
+
+
+## Un poco de probabilidad
+
+![[Pasted image 20250313200522.png]]
+
+![[Pasted image 20250313200531.png]]
+![[Pasted image 20250313200545.png]]
+
+![[Pasted image 20250313200557.png]]
+
+![[Pasted image 20250313200604.png]]

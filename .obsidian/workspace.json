@@ -25,12 +25,14 @@
             "id": "3f2030acd61b6e06",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.8.9"
+                "file": "IA/Inteligencia Artificial.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.9"
+              "icon": "lucide-file",
+              "title": "Inteligencia Artificial"
             }
           }
         ],
@@ -192,8 +194,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "030490d5b6449f94",
+  "active": "3f2030acd61b6e06",
   "lastOpenFiles": [
+    "Pasted image 20250313200604.png",
+    "Pasted image 20250313200557.png",
+    "Pasted image 20250313200545.png",
+    "Pasted image 20250313200531.png",
+    "Pasted image 20250313200522.png",
+    "Pasted image 20250313200431.png",
+    "Pasted image 20250313200416.png",
+    "Pasted image 20250313193524.png",
+    "Pasted image 20250313193429.png",
     "Procesos/sampling.zip",
     "myenv/lib/python3.12/site-packages/numpy-2.2.3.dist-info/REQUESTED",
     "myenv/lib/python3.12/site-packages/numpy-2.2.3.dist-info/INSTALLER",
@@ -204,18 +215,9 @@
     "myenv/lib/python3.12/site-packages/numpy/typing/tests/__pycache__/test_runtime.cpython-312.pyc",
     "myenv/lib/python3.12/site-packages/numpy/typing/tests/__pycache__/test_isfile.cpython-312.pyc",
     "myenv/lib/python3.12/site-packages/numpy/typing/tests/data/pass/__pycache__/warnings_and_errors.cpython-312.pyc",
-    "myenv/lib/python3.12/site-packages/numpy/typing/tests/data/pass/__pycache__/ufuncs.cpython-312.pyc",
     "myenv/lib/python3.12/site-packages/numpy/random/LICENSE.md",
     "Pasted image 20250303221958.png",
     "Pasted image 20250303221923.png",
-    "Pasted image 20250303221903.png",
-    "Pasted image 20250226225024.png",
-    "Pasted image 20250226224945.png",
-    "Pasted image 20250226224858.png",
-    "Pasted image 20250226224828.png",
-    "Pasted image 20250226224233.png",
-    "Pasted image 20250226223927.png",
-    "Pasted image 20250226223801.png",
     "BD/Bases de datos.md",
     "Analisis/Análisis de algoritmos.md"
   ]
